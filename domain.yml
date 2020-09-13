@@ -1,0 +1,67 @@
+---
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - service_provider
+  - bot_challenge
+  - info
+  - thanks
+  - inform
+
+entities:
+  - facility_type
+  - number_of_person
+  - room_type
+
+slots:
+  facility_type:
+    type: text
+  message:
+    type: unfeaturized
+  number_of_person:
+    type: text
+  room_type:
+    type: text
+
+actions:
+  - action_room_search
+
+responses:
+  utter_ask_number_of_people:
+    - text: "Can you provide the number of person you are looking room for?"
+    - text: "Please tell me how many person you are planning to visit with?"
+    - text: "To search {room_type}, i must know how many people are there."
+
+  utter_ask_room_type:
+    - text: "Fine, Can you tell me what type of room you are searching for?"
+    - text: "Okay that's great can you tell me what kind of room you want?"
+    - text: "To search {facility_type}, tell me type of room you seek?"
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+    - custom: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_goodbye:
+    - text: Bye
+
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_how_can_i_help:
+    - text: " Hi, My name is Sid Bot for Yak and Yeti. How can i help you?"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
