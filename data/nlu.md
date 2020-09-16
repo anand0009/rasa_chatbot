@@ -1,38 +1,46 @@
-## intent:greet
-- hey
-- hello
-- hi
-- good morning
-- good evening
-- hey there
+## intent: rooms
+- rooms and suites
+- Rooms and Suites
 
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
+## intent: faqs
+- faqs
+- FAQS
 
-## intent:service_provider
-- I need a [room](facility_type)
-- I am searching for [room](facility_type)
-- I am looking for a [room](facility_type)
-- I was looking for [seminar hall](facility_type)
-- I want to know if i could book [seminar hall](facility_type) 
+## intent: halls
+- halls
+- Halls
+- HALLS
+
+## intent: culinary delights
+- culinary delights
+- Culinary Delights
+- CULINARY DELIGTHS
 
 ## intent: info
-- [1 people](number_of_person)
-- [2 people](number_of_person)
-- [3 people](number_of_person)
-- [4 people](number_of_person)
-- [5 people](number_of_person)
-- [6 people](number_of_person)
-- [deluxe](room_type)
-- [simple](room_type)
-- [attached bathroom](room_type)
-- [with a/c](room_type)
-- [without a/c](room_type)
-- [with natural view](room_type)
-
+- [1](number_of_person)
+- [2](number_of_person)
+- [3](number_of_person)
+- [4](number_of_person)
+- [5](number_of_person)
+- [6](number_of_person)
+- [7](number_of_person)
+- [8](number_of_person)
+- [9](number_of_person)
+- [10](number_of_person)
+- [11](number_of_person)
+- [12](number_of_person)
+- [13](number_of_person)
+- [14](number_of_person)
+- [15](number_of_person)
+- [16](number_of_person)
+- [Deluxe Room](room_type)
+- [deluxe room](room_type)
+- [heritage deluxe room](room_type)
+- [Heritage Deluxe room](room_type)
+- [Club Shangri-La Executive](room_type).
+- [The Junior Suites](room_types)
+- [The Business Suites](room_types)
+- [The Presidential Suites](room_types)
 
 ## intent:affirm
 - yes
@@ -76,3 +84,11 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:greet
+- hi
+- HI
+- Hey
+- Hey, there
+- Hello, there
+- hey

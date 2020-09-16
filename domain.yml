@@ -1,22 +1,27 @@
----
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - service_provider
-  - bot_challenge
-  - info
-  - thanks
-  - inform
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- service_provider
+- bot_challenge
+- info
+- thanks
+- inform
+- rooms
+- faqs
+- culinary delights
+- halls
 entities:
-  - facility_type
-  - number_of_person
-  - room_type
-
+- facility_type
+- number_of_person
+- room_type
+- room_types
 slots:
   facility_type:
     type: text
@@ -24,44 +29,57 @@ slots:
     type: unfeaturized
   number_of_person:
     type: text
-  room_type:
-    type: text
-
-actions:
-  - action_room_search
-
 responses:
   utter_ask_number_of_people:
-    - text: "Can you provide the number of person you are looking room for?"
-    - text: "Please tell me how many person you are planning to visit with?"
-    - text: "To search {room_type}, i must know how many people are there."
-
+  - text: Can you provide the number of person you are looking room for?
+  - text: Please tell me how many person you are planning to visit with?
+  - text: To search {room_type}, i must know how many people are there.
   utter_ask_room_type:
-    - text: "Fine, Can you tell me what type of room you are searching for?"
-    - text: "Okay that's great can you tell me what kind of room you want?"
-    - text: "To search {facility_type}, tell me type of room you seek?"
+  - buttons:
+    - payload: /info
+      title: Deluxe
+    - payload: /info
+      title: Heritage Deluxe
+    - payload: /info
+      title: Club Shangri-La Executive
+    - payload: /info
+      title: The Junior Suites
+    - payload: /info
+      title: The Business Suites
+    - payload: /info
+      title: The Presidential Suites
+    text: Fine, Can you tell me what type of room you are searching for?
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-    - custom: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+  - custom: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-    - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_goodbye:
-    - text: Bye
-
+  - text: Bye
   utter_greet:
-    - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_happy:
-    - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_how_can_i_help:
-    - text: " Hi, My name is Sid Bot for Yak and Yeti. How can i help you?"
-
+  - buttons:
+    - payload: /rooms
+      title: rooms and suites
+    - payload: /halls
+      title: halls
+    - payload: /culinary delights
+      title: culinary delights
+    - payload: /faqs
+      title: faqs
+    text: Hi, My name is Sid Bot for Yak and Yeti. How can i help you?
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-session_config:
-  carry_over_slots_to_new_session: true
-  session_expiration_time: 60
+  - text: I am a bot, powered by Rasa.
+  utter_answer_room:
+  - text: Fine, what room you want. We have this.
+  utter_answer_halls:
+  - text: Fine, what halls you seek. We have this.
+  utter_answer_culinary_delights:
+  - text: Fine, what kind of culinary delights you want. We have this.
+  utter_answer_faqs:
+  - text: Fine, what questions do you have.
+actions:
+- action_room_search

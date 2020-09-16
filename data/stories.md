@@ -1,24 +1,40 @@
 ## book room path
 * greet
   - utter_how_can_i_help
-* service_provider {"facility_type":"room"}
-  - utter_ask_room_type
-* info {"room_type":"deluxe","number_of_person":"3 person"}
-  - action_room_search
-  - slot{"message":"Yes we have the room available"}
+* rooms
+  - utter_answer_room
 * thanks
   - utter_goodbye
 
-## book room + people 
+## book hall path
 * greet
   - utter_how_can_i_help
-* service_provider {"facility_type":"room"}
-  - utter_ask_room_type
-* info {"room_type":"deluxe"}
-  - utter_ask_number_of_people
-* inform {"number_of_person":"3 person"}
-  - action_room_search
-  - slot{"message":"Yes we have the room available"}
+* halls
+  - utter_answer_halls
+* thanks
+  - utter_goodbye
+
+## book culinary path
+* greet
+  - utter_how_can_i_help
+* culinary delights
+  - utter_answer_culinary_delights
+* thanks
+  - utter_goodbye
+
+## book faqs path
+* greet
+  - utter_how_can_i_help
+* faqs
+  - utter_answer_faqs
+* thanks
+  - utter_goodbye
+
+## book room path
+* greet
+  - utter_how_can_i_help
+* rooms
+  - utter_answer_room
 * thanks
   - utter_goodbye
 
