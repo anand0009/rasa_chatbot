@@ -1,4 +1,4 @@
-## intent: rooms
+## intent: rooms_and_suites
 - rooms and suites
 - Rooms and Suites
 
@@ -11,36 +11,55 @@
 - Halls
 - HALLS
 
-## intent: culinary delights
+## intent: culinary_delights
 - culinary delights
 - Culinary Delights
 - CULINARY DELIGTHS
 
-## intent: info
-- [1](number_of_person)
-- [2](number_of_person)
-- [3](number_of_person)
-- [4](number_of_person)
-- [5](number_of_person)
-- [6](number_of_person)
-- [7](number_of_person)
-- [8](number_of_person)
-- [9](number_of_person)
-- [10](number_of_person)
-- [11](number_of_person)
-- [12](number_of_person)
-- [13](number_of_person)
-- [14](number_of_person)
-- [15](number_of_person)
-- [16](number_of_person)
-- [Deluxe Room](room_type)
-- [deluxe room](room_type)
-- [heritage deluxe room](room_type)
-- [Heritage Deluxe room](room_type)
-- [Club Shangri-La Executive](room_type).
-- [The Junior Suites](room_types)
-- [The Business Suites](room_types)
-- [The Presidential Suites](room_types)
+## intent: room_info
+- [Deluxe Room]{"entity":"room_types","value":"deluxe room"}
+- [deluxe room](room_types)
+- I am looking for [deluxe room](room_types)
+- I am seeking for [Deluxe Room]{"entity":"room_types","value":"deluxe room"}
+- [heritage deluxe room](room_types)
+- [Heritage Deluxe room]{"entity":"room_types","value":"heritage deluxe room"}
+- I am looking for [heritage deluxe room](room_types)
+- I need [Heritage Deluxe room]{"entity":"room_types","value":"heritage deluxe room"}
+- [Club Shangri-La Executive]{"entity":"room_types","value":"club shangri-la executive"}
+- [club shangre-la executive](room_types)
+- I am looking for [club shangre-la executive](room_types)
+- I am seeking for [Club Shangri-La Executive]{"entity":"room_types","value":"club shangri-la executive"}
+- [The Junior Suites]{"entity":"room_types","value":"the junior suites"}
+- [the junior suites](room_types)
+- I am looking for [the junior suites](room_types)
+- I am seeking for [The Junior Suites]{"entity":"room_types","value":"the junior suites"}
+- [The Business Suites]{"entity":"room_types","value":"the business suites"}
+- [the business suites](room_types)
+- I am looking for [the business suites](room_types)
+- I need [The Business Suites]{"entity":"room_types","value":"the business suites"} 
+- [the presidential suites](room_types)
+- [The Presidential Suites]{"entity":"room_types","value":"the presidential suites"}
+- I am looking for [The Presidential Suites]{"entity":"room_types","value":"the presidential suites"}
+- I need [the presidential suites](room_types)
+- [1](number) 
+- [2](number)
+- [3](number)
+- [4](number)
+- [5](number)
+- [6](number)
+- [7](number)
+- There are [2](number) adults
+- [4](number) adults please
+- just [3](number) adults 
+- [5](number) adults
+- [6](number) please
+- [Single](number) Adult
+- There are [2](number) adults
+- [4](number) adults please
+- just [3](number) adults 
+- [5](number) adults
+- [6](number) please
+- [Double](number) Adult
 
 ## intent:affirm
 - yes
@@ -48,6 +67,21 @@
 - of course
 - that sounds good
 - correct
+- ye
+- uh yes
+- let's do it
+- yeah
+- uh yes
+- um yes
+- yes knocking
+- that's correct
+- yes yes
+- right
+- yea
+- yes right
+- yes and i dont care
+- right on
+- i love that
 
 ## intent:deny
 - no
@@ -56,6 +90,11 @@
 - don't like that
 - no way
 - not really
+- uh no
+- no thanks
+- nope
+- no this does not apply to me
+- no thank yous
 
 ## intent:mood_great
 - perfect
