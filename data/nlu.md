@@ -41,25 +41,22 @@
 - [The Presidential Suites]{"entity":"room_types","value":"the presidential suites"}
 - I am looking for [The Presidential Suites]{"entity":"room_types","value":"the presidential suites"}
 - I need [the presidential suites](room_types)
-- [1](number) 
-- [2](number)
-- [3](number)
-- [4](number)
-- [5](number)
-- [6](number)
-- [7](number)
-- There are [2](number) adults
-- [4](number) adults please
-- just [3](number) adults 
-- [5](number) adults
-- [6](number) please
-- [Single](number) Adult
-- There are [2](number) adults
-- [4](number) adults please
-- just [3](number) adults 
-- [5](number) adults
-- [6](number) please
-- [Double](number) Adult
+- There are [2](number_adult) adults
+- [4](number_adult) adults please
+- just [3](number_adult) adults 
+- [5](number_adult) adults
+- [6](number_child) please
+- [1](number_child) childrens are coming
+- [1](number_adult) adults are coming
+- There are [2](number_adult) adults
+- There are [2](number_child) childrens
+- [4](number_child) children please
+- just [3](number_adult) adults 
+- [5](number_child) childrens
+- [7](number_child) please
+- [8](number_adult) please
+- We have [3](number_child) Childrens
+- I am coming with [3](number_child) children
 
 ## intent:affirm
 - yes

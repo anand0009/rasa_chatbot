@@ -82,7 +82,8 @@ class RoomForm(FormAction):
         return ["room_types","number_of_adults","number_of_children"]
         
     def slot_mappings(self) -> Dict[Text,Any]:
-        return {"room_types": self.from_text(intent=None),
+        return {"room_types": self.from_entity(entity="room_types",
+                                                intent=["room_info"]),
                 "number_of_adults": self.from_text(intent=None),
                 "number_of_children": self.from_text(intent=None)}
 

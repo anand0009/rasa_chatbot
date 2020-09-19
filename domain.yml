@@ -21,7 +21,8 @@ entities:
 - facility_type
 - number_of_person
 - room_types
-- number
+- number_adult
+- number_child
 slots:
   facility_type:
     type: text
@@ -100,9 +101,9 @@ responses:
   utter_ask_room_types:
   - text: What type of rooms you want?
   utter_ask_number_of_adults:
-  - text: How many adults?
+  - text: How many adults(just value in numbers)?
   utter_ask_number_of_children:
-  - text: How many childrens?
+  - text: How many childrens(just value in numbers?
   utter_submit:
   - text: All done!
   utter_slots_values:
