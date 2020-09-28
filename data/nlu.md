@@ -58,6 +58,43 @@
 - We have [3](number_child) Childrens
 - I am coming with [3](number_child) children
 
+## intent:name
+ - [Siddhartha Shrestha](person)
+ - [siddhartha shrestha](person)
+ - [Ram Bahadur Shrerpa](person)
+ - [shyam singh](person)
+ - [Gopal Khatri](person)
+ - [Sagar Tamang](person)
+ - [sagar kafle](person)
+ - [Charles Darwin](person)
+ - [Mitchel Johnson](person)
+ - [Stephen Hawking](person)
+ - [Diego maradona](person)
+ - [pele](person)
+ - [Bam dev gautam](person)
+ - [David Beckham](person)
+ - [Sanjay Khadka](person)
+ - [pema tamang](person)
+ - [suraj singh thakuri](person)
+
+## intent: view_details
+- View Details
+- view details
+- VIEW DETAILS
+
+## intent: book_room
+- BOOK ROOM
+- Book Room
+- book room
+
+## intent: deluxe_room_details
+- Read More
+- Deluxe room details
+- deluxe room detail
+- deluxe rooms details
+- Deluxe Room Details
+- Deluxe Rooms Detail
+
 ## intent:affirm
 - yes
 - indeed
@@ -79,6 +116,22 @@
 - yes and i dont care
 - right on
 - i love that
+
+## intent: out_of_scope
+- Hey, i have changed my mind i don't want it
+- Well i won't be giving the answer
+- wait stop
+- you are no help
+- tell me about weather
+- tell me about politics
+- stop asking
+- i don't want to tell you that
+- none of your business
+- don't like that
+- I am not look for it
+- how old are you
+- do you love me
+- i want something else
 
 ## intent:deny
 - no
