@@ -15,6 +15,10 @@ pipeline:
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
+  - name: DucklingHTTPExtractor 
+    url: http://localhost:8000 
+    dimensions: ["time"]
+    timezone: "Asia/Kathmandu"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

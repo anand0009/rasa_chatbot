@@ -16,6 +16,17 @@
 - Culinary Delights
 - CULINARY DELIGTHS
 
+## intent: book
+- Book Now
+- book now
+- Book
+- book
+
+## intent: describe
+- Describe
+- describe
+- Know More
+
 ## intent: room_info
 - [Deluxe Room]{"entity":"room_types","value":"deluxe room"}
 - [deluxe room](room_types)
@@ -87,13 +98,38 @@
 - Book Room
 - book room
 
-## intent: deluxe_room_details
-- Read More
-- Deluxe room details
-- deluxe room detail
-- deluxe rooms details
-- Deluxe Room Details
-- Deluxe Rooms Detail
+## intent: deluxe_room
+- Deluxe room
+- deluxe room
+- deluxe rooms
+- Deluxe Room
+- Deluxe Rooms
+
+## intent: heritage_deluxe_room
+- heritage deluxe room
+- Heritage Deluxe room
+- heritage deluxe rooms
+- Heritage deluxe rooms
+
+## intent: club_shangre_la_executive
+- club shangre-la executive
+- Club Shangre-la Executive
+- Club Shangre-La Executive
+
+## intent: the_junior_suites
+- the junior suites
+- The Junior Suites
+- The junior suites
+
+## intent: the_business_suites
+- the business suites
+- The Business Suites
+- The business suites
+
+## intent: the_presidential_suites
+- the presidential suites
+- The Presidential Suites
+- The presidential suites
 
 ## intent:affirm
 - yes
@@ -181,3 +217,8 @@
 - Hey, there
 - Hello, there
 - hey
+
+## intent: thanks
+- OK thanks
+- Thank you
+- Thanks

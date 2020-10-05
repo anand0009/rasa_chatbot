@@ -19,6 +19,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 import random
+import dateutil.parser
 
 '''
 class action_room_search(Action):
@@ -117,18 +118,19 @@ class RoomForm(FormAction):
     def required_slots(tracker:Tracker) -> List[Text]:
         """ A list of slots that form has to fill"""
         if tracker.get_slot("have_children") == True:
-            return ["name","room_types","number_of_adults","have_children","number_of_children"]
+            return ["name","time","number_of_adults","have_children","number_of_children"]
         else:
-            return ["name","room_types","number_of_adults","have_children"]
+            return ["name","time","number_of_adults","have_children"]
     def slot_mappings(self) -> Dict[Text,Any]:
         
-        return {"room_types": self.from_entity(entity="room_types",intent=["room_info"]),
-                "name": self.from_text(intent="name"),
+        return {"name": self.from_text(intent="name"),
+                "time": self.from_entity(entity="time"),
                 "number_of_adults": self.from_text(intent=None),
                 "have_children": [self.from_intent(intent="affirm",value=True),
                                 self.from_intent(intent="deny",value=False)],
                 "number_of_children": self.from_text(intent=None)}
 
+    '''
     @staticmethod
     def room_db() -> List[Text]:
         """ Database of Room"""
@@ -140,7 +142,7 @@ class RoomForm(FormAction):
             "the business suites",
             "the presidential suites",
         ]
-
+    '''
     @staticmethod
     def is_int(string: Text) -> bool:
         try:
@@ -148,14 +150,14 @@ class RoomForm(FormAction):
             return True
         except ValueError:
             return False
-
+    '''        
     def validate_room_types(self,value: Text, dispatcher: CollectingDispatcher, tracker:Tracker,domain: Dict[Text,Any]) -> Dict[Text,Any]:
         if value.lower() in self.room_db():
             return {"room_types":value}
         else:
             dispatcher.utter_template("utter_wrong_room_types",tracker)
             return {"room_types": None}
-
+    '''
     def validate_number_of_adults(self,value: Text, dispatcher: CollectingDispatcher, tracker:Tracker,domain: Dict[Text,Any]) -> Dict[Text,Any]:
         if self.is_int(value) and int(value) >0:
             return {"number_of_adults":value}
@@ -170,15 +172,21 @@ class RoomForm(FormAction):
             dispatcher.utter_template("utter_wrong_number_of_children",tracker)
             return {"number_of_children":None}
 
+    def validate_time(self,
+                  value: Text,
+                  dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any],
+                  ) -> Dict[Text, Any]:
+    
+        if value != None:
+            datetime_obj = dateutil.parser.parse(value)
+            apptDate= datetime_obj.strftime('%m-%d-%Y')
+            
+        return {"time": apptDate}
+
     def submit(self,dispatcher: CollectingDispatcher,tracker:Tracker,domain:Dict[Text,Any]) -> List[Dict]:
 
-        response = store_sheet(
-            tracker.get_slot('name'),
-            tracker.get_slot('room_types'),
-            tracker.get_slot('number_of_adults'),
-            tracker.get_slot('have_children'),
-            tracker.get_slot('number_of_children')
-            )
         dispatcher.utter_template("utter_submit",tracker)
         return []
 
@@ -188,13 +196,13 @@ class ActionResetAllSlots(Action):
         return "action_reset_all_slots"
 
     def run(self, dispatcher, tracker, domain):
-        return [AllSlotsReset()]
+        
+        return [SlotSet("name",None),SlotSet("number_of_adults",None),SlotSet("have_children",None),SlotSet("number_of_children",None)]
 
-
-def store_sheet(name,room_types,number_of_adults,have_children,number_of_children):
+def store_sheet(name,room_types,time,number_of_adults,have_children,number_of_children):
       # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict[Text, Any]]
         num = random.randint (0,99999)
-        raw_update=[num,name,room_types,number_of_adults,have_children,number_of_children]
+        raw_update=[num,name,room_types,time,number_of_adults,have_children,number_of_children]
         scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
         credentials=ServiceAccountCredentials.from_json_keyfile_name('credential.json',scope)
         clients=gspread.authorize(credentials)
@@ -204,4 +212,23 @@ def store_sheet(name,room_types,number_of_adults,have_children,number_of_childre
         response= 'I’m sharing the information on your behalf with our team. Have a nice day!'
 
         print(response)
+        return []
+
+class storedata(Action):
+
+    def name(self) -> Text:
+        return "action_store"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        response = store_sheet(
+            tracker.get_slot('name'),
+            tracker.get_slot('room_types'),
+            tracker.get_slot('time'),
+            tracker.get_slot('number_of_adults'),
+            tracker.get_slot('have_children'),
+            tracker.get_slot('number_of_children')
+            )
         return []
