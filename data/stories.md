@@ -1,198 +1,126 @@
-## book room path
+## book a budget room path 
 * greet
   - utter_how_can_i_help
-* rooms_and_suites
-  - action_reset_all_slots
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* thanks
-  - utter_goodbye
+* rooms
+  - utter_ask_room_types
 
-## book room stop
-* greet
-  - utter_how_can_i_help
-* rooms_and_suites
-  - action_reset_all_slots
-  - room_form
-  - form{"name":"room_form"}
-* out_of_scope
-  - utter_ask_continue
+* budget_room
+
+  - utter_great_choice
+  - utter_budget_features
+  - utter_budget_image
+  - utter_budget_confirm
+
+
+
+
+* affirm
+  - utter_go_to_reception
+
+* last_queries
+  -utter_let_me_know_if_any_more_queries   
+
 * deny
-  - action_deactivate_form
-  - form{"name": null}
-  - utter_goodbye
+ - utter_thanks
 
-## book room continue
+
+## book a deluxe room path 
 * greet
   - utter_how_can_i_help
-* rooms_and_suites
-  - action_reset_all_slots
-  - room_form
-  - form{"name":"room_form"}
-* out_of_scope
-  - utter_ask_continue
-* affirm
-  - room_form
-  - form{"name": null}
-  - utter_slots_values
-
-## say goodbye
-* goodbye
-  - utter_goodbye
-
-## bot challenge
-* bot_challenge
-  - utter_iamabot
-  - utter_cheer_up
-
-## check1
-* greet
-  - utter_how_can_i_help
-* rooms_and_suites
+* rooms
   - utter_ask_room_types
-* deluxe_room
+* budget_room
+
+  - utter_great_choice
+  - utter_deluxe_features
   - utter_deluxe_image
   - utter_deluxe_confirm
+
+
+
+
 * affirm
-  - utter_ask_more
-* book
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
+  - utter_go_to_reception
+
+* last_queries
+  -utter_let_me_know_if_any_more_queries   
+
 * deny
-  - action_reset_all_slots
-  - utter_reconfirm
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* affirm
-  - action_store
-  - action_reset_all_slots
-  - utter_contact
+ - utter_thanks
 
-## check
+
+## book a heritage deluxe room path 
 * greet
   - utter_how_can_i_help
-* rooms_and_suites
+* rooms
   - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
-* affirm
-  - utter_ask_more
-* book
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* affirm
-  - action_store
-  - action_reset_all_slots
-  - utter_contact
+* budget_room
 
-## check negative
-* greet
-  - utter_how_can_i_help
-* rooms_and_suites
-  - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
+  - utter_great_choice
+  - utter_heritage_deluxe_features
+  - utter_heritage_deluxe_image
+  - utter_heritage_deluxe_confirm
+
+
+
+
+* affirm
+  - utter_go_to_reception
+
+* last_queries
+  -utter_let_me_know_if_any_more_queries   
+
 * deny
-  - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
-* affirm
-  - utter_ask_more
-* book
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* deny
-  - action_reset_all_slots
-  - utter_reconfirm
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* affirm
-  - action_store
-  - action_reset_all_slots
-  - utter_contact
+ - utter_thanks
 
-## check negative 1
+
+## book a VIP room path 
 * greet
   - utter_how_can_i_help
-* rooms_and_suites
+* rooms
   - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
-* deny
-  - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
-* affirm
-  - utter_ask_more
-* book
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* affirm
-  - action_store
-  - action_reset_all_slots
-  - utter_contact
+* budget_room
 
-## check3
+  - utter_great_choice
+  - utter_VIP_features
+  - utter_VIP_image
+  - utter_VIP_confirm
+
+
+
+
+* affirm
+  - utter_go_to_reception
+
+* last_queries
+  -utter_let_me_know_if_any_more_queries   
+
+* deny
+ - utter_thanks
+
+
+
+## book a VVIP room path 
 * greet
   - utter_how_can_i_help
-* rooms_and_suites
+* rooms
   - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
-* affirm
-  - utter_ask_more
-* describe
-  - utter_dulexe_room_details
-  - utter_more
-* book
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* deny
-  - action_reset_all_slots
-  - utter_reconfirm
-  - room_form
-  - form{"name":"room_form"}
-  - form{"name": null}
-  - utter_slots_values
-* affirm
-  - action_store
-  - action_reset_all_slots
-  - utter_contact
+* budget_room
 
-## check3
-* greet
-  - utter_how_can_i_help
-* rooms_and_suites
-  - utter_ask_room_types
-* deluxe_room
-  - utter_deluxe_image
-  - utter_deluxe_confirm
+  - utter_great_choice
+  - utter_VVIP_features
+  - utter_VVIP_image
+  - utter_VVIP_confirm
+
+
+
+
 * affirm
-  - utter_ask_more
-* describe
-  - utter_dulexe_room_details
-  - utter_more
-* thanks
-  - utter_thanks
+  - utter_go_to_reception
+
+* last_queries
+  -utter_let_me_know_if_any_more_queries   
+
+* deny
+ - utter_thanks
+ 
