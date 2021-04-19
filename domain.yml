@@ -29,168 +29,180 @@ intents:
 - out_of_scope
 - book
 - describe
-entities:
-- facility_type
-- number_of_person
-- room_types
-- number_adult
-- number_child
-- person
-- time
-- number
-- email
-slots:
-  facility_type:
-    type: text
-  have_children:
-    type: unfeaturized
-    auto_fill: false
-  message:
-    type: unfeaturized
-  name:
-    type: unfeaturized
-    auto_fill: false
-  number_of_adults:
-    type: unfeaturized
-    auto_fill: false
-  number_of_children:
-    type: unfeaturized
-    auto_fill: false
-  room_types:
-    type: unfeaturized
-  time:
-    type: unfeaturized
-    auto_fill: false
-responses:
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_deluxe_image:
+
+
+utter_great_choice:
+   text: "Excellent choice Sir/Mam !" 
+
+
+utter_budget_image:
   - image: https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/125/2017/05/25023446/Rooms-Suites-Section-2nd-Room-Deluxe-Room.jpg
-    text: That's great
-  utter_deluxe_confirm:
-  - buttons:
-    - payload: /affirm
-      title: Yeah
-    - payload: /deny
-      title: Nope
-    text: Are you looking for Deluxe Room?
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_goodbye:
-  - text: Bye
-  utter_greet:
-  - text: Hey! How are you?
-  utter_happy:
-  - text: Great, carry on!
-  utter_how_can_i_help:
-  - buttons:
-    - payload: /rooms_and_suites
-      title: rooms and suites
-    - payload: /halls
-      title: halls
-    - payload: /culinary_delights
-      title: culinary delights
-    - payload: /faqs
-      title: faqs
-    text: Hi, My name is Sid Bot for Yak and Yeti. How can i help you?
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_answer_room:
-  - text: Fine, what room you want. We have this.
-  utter_answer_halls:
-  - text: Fine, what halls you seek. We have this.
-  utter_answer_culinary_delights:
-  - text: Fine, what kind of culinary delights you want. We have this.
-  utter_answer_faqs:
-  - text: Fine, what questions do you have.
-  utter_dulexe_room_details:
-  - text: "These Deluxe Rooms let you relax as you admire a \n - beautiful view of\
+
+
+utter_deluxe_image:
+  - image: https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/125/2017/05/25023446/Rooms-Suites-Section-2nd-Room-Deluxe-Room.jpg
+
+
+utter_heritage_deluxe_image:
+  - image: https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/125/2017/05/25023446/Rooms-Suites-Section-2nd-Room-Deluxe-Room.jpg
+
+utter_VIP_image:
+  - image: https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/125/2017/05/25023446/Rooms-Suites-Section-2nd-Room-Deluxe-Room.jpg
+
+utter_VVIP_image:
+  - image: https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/125/2017/05/25023446/Rooms-Suites-Section-2nd-Room-Deluxe-Room.jpg
+
+
+
+utter_budget_features:
+   text: "Some of its features are- \n •	Cleaning and maintance
+              \n •	Budget friendly \n •	In-room tea and coffee
+               \n •	Writing desk \n •	Shower
+                     \n•	Hair dyer \n •	International call."
+
+
+utter_deluxe_features:
+ - text: "These Deluxe Rooms let you relax as you admire a \n - beautiful view of\
       \ the pool. \n - Stay connected as you enjoy our free WiFi \n - watch movies\
       \ with our 32-inch LCD TV and DVD player. \n - Refresh yourself as you take\
       \ a step into our rain shower” \n - Smart IPTV  Bathrooms with walk-in shower\
       \ \n - bathtub, Hairdryer, Coffee Machine, Refrigerator,Microwave Oven,Toaster\
       \ Iron/ironing board In-roomlaptop-sized. "
-  utter_more:
+
+
+
+utter_heritage_deluxe_features:
+   - text: "• Some of its features are- \n
+•	In-room tea and coffee \n
+•	Writing desk \n
+•	Personal safe \n
+•	Minibar \n
+•	Refrigerator \n
+•	Electronic key card access \n
+•	Air conditioning with individual controls \n
+•	Ironing board and iron (on request) \n
+•	Shower \n
+•	Hair dyer \n
+ 
+-Entertainment \n
+•	DVD player \n
+•	32-inch LCD TV \n
+•	Cable and international satellite channels \n
+•	Satellite channels \n
+
+
+-communication technology \n
+•	Free wifi \n
+•	Idd call \n
+•	International call \n
+
+"
+
+
+utter_VIP_features:
+    - text: "• Some of its features are- \n •	Air conditioning 
+•	Working desk \n
+•	Shower \n
+•	Flat screen tv \n
+•	Mini bar \n
+•	Tea and coffee making facilities \n
+•	Iron and ironing board \n
+•	Hair dyer \n
+•	Loccitane toiletries \n
+•	Bathrobes \n
+•	Slippers \n
+•	Complimentary wifi \n
+•	Lounge/Lobby \n
+•	 Restaurants/Dinning room \n
+
+•	 Health Club \n
+•	Swimming Pool \n
+•	 Parking facilities \n
+"
+
+
+utter_VVIP_features:
+    - text: "• Some of its features are- \n •	Air conditioning 
+•	Working desk \n
+•	Shower \n
+•	Flat screen tv \n
+•	Mini bar \n
+•	Tea and coffee making facilities \n
+•	Iron and ironing board \n
+•	Hair dyer \n
+•	Loccitane toiletries \n
+•	Bathrobes \n
+•	Slippers \n
+•	Complimentary wifi \n
+•	Lounge/Lobby \n
+•	 Restaurants/Dinning room \n
+
+•	 Health Club \n
+•	Swimming Pool \n
+•	 Parking facilities \n
+•  In room Entertainment system a 42’ and 37’ LCD TVs, including multi channel TV with satellite channels as well as Video on Demand with a wide choice of films
+"
+
+utter_ask_room_types:
   - buttons:
-    - payload: /book
-      title: book
-    - payload: /thanks
-      title: end
-    text: Now would you like to book or end.
-  utter_ask_room_types:
-  - buttons:
+    - payload: /budget_room{"room_types":"budget room"}
+      title: deluxe room
     - payload: /deluxe_room{"room_types":"deluxe room"}
       title: deluxe room
-    - payload: /heritage_deluxe_room{"room_types":"heritage deluxe room"}
-      title: heritage deluxe room
-    - payload: /club_shangre_la_executive{"room_types":"club shangre-la executive"}
-      title: club shangre-la executive
-    - payload: /the_junior_suites{"room_types":"the junior suites"}
-      title: the junior suites
-    - payload: /the_business_suites{"room_types":"the business suites"}
-      title: the business suites
-    - payload: /the_presidential_suites{"room_types":"the presidential suites"}
-      title: the presidential suites
-    text: What type of rooms you want? Select.
-  utter_ask_number_of_adults:
-  - text: How many adults(just value in numbers)?
-  utter_ask_number_of_children:
-  - text: How many childrens(just value in numbers?
-  utter_ask_have_children:
+    - payload: /heritage_room{"room_types":"heritage room"}
+      title: heritage room
+    - payload: /VIP_room{"room_types":"VIP room"}
+      title: VIP room
+    - payload: /VVIP_room{"room_types":"VVIP room"}
+      title: VVIP room
+    
+    text: "What type of rooms you want? Please select from given choices." 
+
+
+utter_budget_confirm:
+ - buttons:
+  - payload: /affirm
+    title: Yeah
+  - payload: /deny
+    title: Nope
+text: "Please confirm that you want a Budget Room?
+" 
+
+utter_deluxe_confirm:
+ - buttons:
+  - payload: /affirm
+    title: Yeah
+  - payload: /deny
+    title: Nope
+text: "Please confirm that you want a Budget Room?
+" 
+
+
+utter_heritage_deluxe_confirm:
+ - buttons:
+  - payload: /affirm
+    title: Yeah
+  - payload: /deny
+    title: Nope
+text: "Please confirm that you want a Budget Room?
+" 
+
+
+utter_VIP_confirm:
+ - buttons:
+  - payload: /affirm
+    title: Yeah
+  - payload: /deny
+    title: Nope
+text: "Please confirm that you want a Budget Room?
+" 
+
+
+utter_VVIP_confirm:
   - buttons:
     - payload: /affirm
       title: Yeah
     - payload: /deny
       title: Nope
-    text: Do you have any childrens coming?
-  utter_ask_more:
-  - buttons:
-    - payload: /book
-      title: book now
-    - payload: /describe
-      title: Know More
-    text: What would you like to do?
-  utter_ask_name:
-  - text: Please tell me name you would like to register with.
-  utter_submit:
-  - text: All done!
-  utter_slots_values:
-  - buttons:
-    - payload: /affirm
-      title: Yeah
-    - payload: /deny
-      title: Nope
-    text: "Does your required information as below:\n - name_of_customer: {name}\n\
-      \ - room_types: {room_types}\n - num_adults: {number_of_adults}\n - Date: {time}\
-      \ \n - have_children: {have_children}\n - num_children: {number_of_children}"
-  utter_contact:
-  - text: Okay please be patient our team will contact you in few minutes with the
-      availability of the room and further procedure
-  utter_reconfirm:
-  - text: Fine please reprovide us the following info required
-  utter_wrong_room_types:
-  - text: Sorry we don't have that room here. Please try again
-  utter_wrong_number_of_children:
-  - text: Sorry invalid number entered. Please try again
-  utter_wrong_number_of_adults:
-  - text: Sorry invalid number entered. Please try again
-  utter_ask_continue:
-  - text: Do you want to continue filling the form?
-  utter_ask_time:
-  - text: Can you please mention the date you are willing to check-in
-  utter_thanks:
-  - text: thanks
-actions:
-- action_book_rooms
-- utter_ask_room_types
-- utter_ask_number_of_children
-- utter_ask_number_of_adults
-- utter_ask_time
-- utter_wrong_room_types
-- utter_wrong_number_of_adults
-- utter_wrong_number_of_children
-- action_reset_all_slots
-- action_store
-forms:
-- room_form
+    text: "Please confirm that you want a Budget Room?
+" 
